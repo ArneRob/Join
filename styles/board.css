@@ -249,7 +249,6 @@
 .task-assigned__list {
   display: grid;
   gap: 10px;
-  margin-top: -16px;
 }
 
 .task-assigned__item {
