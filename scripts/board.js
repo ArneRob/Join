@@ -132,7 +132,7 @@ function toSubtask(x) {
  * @returns {Promise<void>}
  */
 async function saveSubtasks(taskId, subs) {
-  const r = await fetch(`${BASE_URL}/tasks/${taskId}.json`, {
+  const r = await fetch(`${DB_ROOT}/tasks/${taskId}.json`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ subtasks: subs }),

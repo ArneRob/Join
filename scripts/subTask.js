@@ -184,7 +184,7 @@ async function saveSubtasksFromOverlay(taskId) {
     const txt = (el.querySelector(".txt")?.textContent || "").trim();
     return { text: txt, done: !!chk?.checked };
   });
-  const res = await fetch(`${RTDB_BASE}tasks/${taskId}/subtasks.json`, {
+  const res = await fetch(`${DB_ROOT}tasks/${taskId}/subtasks.json`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(subs),
@@ -201,7 +201,7 @@ async function saveSubtasksFromOverlay(taskId) {
  * @returns {void}
  */
 function updateSubtaskCountersUI(taskId, done, total) {
-  const ov = byId("taskDetailOverlay"),
+  const ov = document.getElementById("taskDetailOverlay"),
     c = ov?.querySelector(".subtasks-counter");
   if (c) c.textContent = `${done}/${total} Subtasks`;
   const card = document.querySelector(`.card[data-id="${taskId}"]`) || null;
