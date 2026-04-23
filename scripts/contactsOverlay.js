@@ -1,5 +1,5 @@
 const addNameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿß\s'-]+(?:\s+[a-zA-ZÀ-ÖØ-öø-ÿß\s'-]+)+$/;
-const addEmailRegex = /^[\p{L}0-9]+(?:\.[\p{L}0-9]+)*@[\p{L}0-9]+\.[\p{L}]+$/u;
+const addEmailRegex = /^[\p{L}0-9]+([-.][\p{L}0-9]+)*@[\p{L}0-9]+([-.][\p{L}0-9]+)*\.[\p{L}]+$/u;
 const addPhoneRegex = /^\s*$|^\+?[0-9\-\*\s]+$|^add phone number$/i;
 
 /**
