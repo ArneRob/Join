@@ -249,6 +249,9 @@
 .task-assigned__list {
   display: grid;
   gap: 10px;
+  overflow: scroll;
+  max-height: 200px;
+  overflow-x: hidden;
 }
 
 .task-assigned__item {
@@ -256,9 +259,6 @@
   align-items: center;
   gap: 16px;
   padding: 7px 16px;
-  overflow: scroll;
-  max-height: 200px;
-  overflow-x: hidden;
 }
 
 .task-assigned .av {
