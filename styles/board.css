@@ -256,6 +256,9 @@
   align-items: center;
   gap: 16px;
   padding: 7px 16px;
+  overflow: scroll;
+  max-height: 200px;
+  overflow-x: hidden;
 }
 
 .task-assigned .av {
@@ -306,16 +309,16 @@
   background-image: url(../assets/svg/checked.svg);
 }
 
-.subtasks__item input[type="checkbox"]:checked + .cb--unchecked {
+.subtasks__item input[type="checkbox"]:checked+.cb--unchecked {
   display: none;
 }
 
-.subtasks__item input[type="checkbox"]:checked + .cb--unchecked + .cb--checked {
+.subtasks__item input[type="checkbox"]:checked+.cb--unchecked+.cb--checked {
   display: inline-block;
 }
 
-.subtasks__item input[type="checkbox"]:focus-visible + .cb--unchecked,
-.subtasks__item input[type="checkbox"]:focus-visible + .cb--unchecked + .cb--checked {
+.subtasks__item input[type="checkbox"]:focus-visible+.cb--unchecked,
+.subtasks__item input[type="checkbox"]:focus-visible+.cb--unchecked+.cb--checked {
   outline: 2px solid var(--color-statsbar);
   outline-offset: 2px;
   border-radius: 3px;
